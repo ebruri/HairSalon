@@ -9,6 +9,6 @@ namespace HairSalon.Models
     public string Phone { get; set; }
     public string Address { get; set; }
     public int StylistId { get; set; }
-    public virtual Client Client { get; set; }
+    public virtual Stylist Stylist { get; set; }
   }
 }
