@@ -1,0 +1,25 @@
+@{
+  Layout = "_Layout";
+}
+
+@model HairSalon.Models.Client
+
+<h2>Add a new Client</h2>
+
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.ClientName)
+  @Html.TextBoxFor(model => model.ClientName)
+
+  @Html.LabelFor(model => model.Phone)
+  @Html.TextBoxFor(model => model.Phone)
+
+  @Html.LabelFor(model => model.Address)
+  @Html.TextBoxFor(model => model.Address)
+
+  @Html.LabelFor(model => model.Stylist)
+  @Html.DropDownList("StylistId")
+  
+  <button type="submit" class="btn btn-primary" style="width:250px">Add New Client</button>
+}
+<p>@Html.ActionLink("Show all clients", "Index")</p>

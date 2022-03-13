@@ -7,6 +7,7 @@
 
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
 
-@Html.ActionLink("Back to Stylists", "Index", new { area = "" }, new { @class = "btn btn-secondary"  })
-@Html.ActionLink("Edit Stylist", "Edit", new { id = Model.StylistId})
-@Html.ActionLink("Delete Stylist", "Delete", new { id = Model.StylistId})
+@Html.ActionLink("Back to Stylists", "Index", null, null, new { @class = "btn btn-secondary"  })
+@Html.ActionLink("Edit Stylist", "Edit", new { id = Model.StylistId}, new { @class = "btn btn-secondary"  })
+@Html.ActionLink("Delete Stylist", "Delete", new { id = Model.StylistId}, new { @class = "btn btn-secondary"  })
+<a href='./Clients/Index'><button type="button" class="btn btn-secondary" style="width:150px">See all clients</button></a>
