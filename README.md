@@ -14,7 +14,7 @@
 
 
 ## Description
-A website where users can add their favorite restaurants based on the type of cuisine they offer.
+A website where users can add the stylist and their clients.
 
 ### Schema
 ![Schema](./HairSalon/wwwroot/img/schema.png)
