@@ -2,7 +2,7 @@
 #### _a C# MVC Hair Salon application._
 
 #### by **Ebru Rice**
-#### March 6, 2022
+#### March 12, 2022
 
 ## Technologies Used
 - C#
