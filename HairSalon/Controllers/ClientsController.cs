@@ -36,5 +36,18 @@ namespace HairSalon.Controllers
       Client thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id);
       return View(thisClient);
     }
+    public ActionResult Edit(int id)
+    {
+      var thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id);
+      ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "Name");
+      return View(thisClient);
+    }
+    [HttpPost]
+    public ActionResult Edit(Client client)
+    {
+      _db.Entry(client).State = EntityState.Modified;
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
   }
 } 
