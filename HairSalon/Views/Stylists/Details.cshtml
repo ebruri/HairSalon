@@ -8,5 +8,5 @@
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
 
 @Html.ActionLink("Back to Stylists", "Index", new { area = "" }, new { @class = "btn btn-secondary"  })
-@Html.ActionLink("Edit Stylist", "Edit", new { area = "" }, new { @class = "btn btn-secondary"  })
-@Html.ActionLink("Delete Stylist", "Delete", new { area = "" }, new { @class = "btn btn-secondary"  })
+@Html.ActionLink("Edit Stylist", "Edit", new { id = Model.StylistId})
+@Html.ActionLink("Delete Stylist", "Delete", new { id = Model.StylistId})
