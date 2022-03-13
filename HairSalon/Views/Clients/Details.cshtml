@@ -5,11 +5,23 @@
 @model HairSalon.Models.Client
 
 <h2>Client Information</h2>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table-active">
+      <th scope="row">@Html.DisplayFor(model => model.ClientName)</th>
+      <td>@Html.DisplayFor(model => model.Phone)</td>
+      <td>@Html.DisplayFor(model => model.Address)</td>
+    </tr>
+  </tbody>
+</table>
 
-<h3>@Html.DisplayNameFor(model => model.ClientName): @Html.DisplayFor(model => model.ClientName)<h3>
-<h3>@Html.DisplayNameFor(model => model.Phone): @Html.DisplayFor(model => model.Phone)<h3>
-<h3>@Html.DisplayNameFor(model => model.Address): @Html.DisplayFor(model => model.Address)<h3>
-
-<p>@Html.ActionLink("Edit Client", "Edit", new { id = Model.ClientId })</p>
-<p>@Html.ActionLink("Delete Client", "Delete", new { id = Model.ClientId })</p>
-<p>@Html.ActionLink("Back to list", "Index")</p>  
+<p>@Html.ActionLink("Edit Client", "Edit", new { id = Model.ClientId }, new { @class = "btn btn-secondary" })</p>
+<p>@Html.ActionLink("Delete Client", "Delete", new { id = Model.ClientId }, new { @class = "btn btn-secondary" })</p>
+<p>@Html.ActionLink("Back to list", "Index", new { area = "" }, new { @class = "btn btn-secondary" })</p>  

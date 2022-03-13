@@ -19,6 +19,17 @@ namespace HairSalon.Controllers
       List<Stylist> model = _db.Stylists.ToList();
       return View(model);
     }
+    // [HttpGet]
+    // // public async Task<IActionResult> Index(string search)
+    // // {
+    // //   ViewData["Getstylists"] = search;
+    // //   var styquery = from x in _db.Stylists select x;
+    // //   if(!string.IsNullOrEmpty(search))
+    // //   {
+    // //     styquery=styquery.Where(x=>x.Name.Contains(search));
+    // //     return View(await styquery.AsNoTracking().ToListAsync());
+    // //   }
+    // // }
     public ActionResult Create()
     {
       return View();
