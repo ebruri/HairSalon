@@ -20,6 +20,6 @@
   @Html.LabelFor(model => model.Stylist)
   @Html.DropDownList("StylistId")
   
-  <button type="submit" class="btn btn-primary" style="width:250px">Add New Client</button>
+  <button type="submit" class="btn btn-secondary" style="width:250px">Add New Client</button>
 }
-<p>@Html.ActionLink("Show all clients", "Index")</p>
+<p>@Html.ActionLink("Show all clients", "Index", new { area = "" }, new { @class = "btn btn-secondary" })</p>

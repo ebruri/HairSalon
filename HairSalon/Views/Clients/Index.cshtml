@@ -15,5 +15,6 @@
 {
   <li>@Html.ActionLink($"{client.ClientName}", "Details", new {id = client.ClientId})| @client.Stylist.Name</li>
 }
+</br>
 @Html.ActionLink("Add new client", "Create", new { area = "" }, new { @class = "btn btn-secondary" })
 @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "btn btn-secondary"  })
